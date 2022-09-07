@@ -3,6 +3,13 @@
 <%= render @user %>
 
 <div>
+  <p>
+    <strong>Contents:</strong>
+    <%= @contents.length > 0 ? @contents.join(', ') : "No content" %>
+  </p>
+</div>
+
+<div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>
 
