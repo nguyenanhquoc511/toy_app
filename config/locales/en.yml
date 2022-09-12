@@ -1,2 +1,4 @@
 en:
-  hello: "Hello world"
+  controllers:
+    users_controller:
+      no_content: "No content"
