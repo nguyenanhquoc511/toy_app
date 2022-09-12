@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  resources :users
+  scope "(:locale)", locale: /en|vi/ do
+    resources :microposts
+    resources :users
+  end
 end

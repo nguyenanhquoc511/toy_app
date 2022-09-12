@@ -5,7 +5,12 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show; end
+  def show
+    @contents = @user.microposts
+                     .map { |micropost| micropost.content }
+                     .join(", ")
+    @contents = t "controllers.users_controller.no_content" if @contents.empty?
+  end
 
   def new
     @user = User.new

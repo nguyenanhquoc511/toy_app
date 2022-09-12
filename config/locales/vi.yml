@@ -1,0 +1,4 @@
+vi:
+  controllers:
+    users_controller:
+      no_content: "Không nội dung"
